@@ -31,7 +31,9 @@ For example: db.allocations.create_index([("vehicle_id", 1), ("allocation_date",
 I tried to write unit test. You will find it inside /app/tests/test_main.py file. Since, I used moto (Async MongoDB Operation) that's why it become a little hard to write unit test now. Because I have not enough time to debug it and write proper test for async operation. But I will be able to learn in depth if I will get the opportunity. 
 
 ***Run the Application***
-1. In local machine: Navigate to /app and run the following command: uvicorn main:app --reload 
+1. In local machine: Navigate to /app and run the following command: <br>
+ a. pip install -r requirements.txt</br>
+ b. uvicorn main:app --reload </br>
 2. Using Docker: Navigate root folder where docker-compose exist and run the following command: docker-compose up --build
 
 ***swagger documentation:***
