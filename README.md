@@ -13,7 +13,7 @@ Is there a limit to how many times an allocation can be updated?
 What happens if an employee tries to delete an allocation after the allocation date?
 
 
-***Technologies***
+***Technologies:***
 FastAPI, MongoDB, Docker
 
 ***Optimization for Millions Users***
@@ -27,13 +27,13 @@ FastAPI, MongoDB, Docker
 For example: db.allocations.create_index([("vehicle_id", 1), ("allocation_date", 1)])
 4. Horizontally scale the application using Kubernetes for auto-scaling during peak traffic.
 
-***Unit Test***
+***Unit Test:***
 I tried to write unit test. You will find it inside /app/tests/test_main.py file. Since, I used moto (Async MongoDB Operation) that's why it become a little hard to write unit test now. Because I have not enough time to debug it and write proper test for async operation. But I will be able to learn in depth if I will get the opportunity. 
 
 ***Run the Application***
 1. In local machine: Navigate to /app and run the following command: uvicorn main:app --reload 
 2. Using Docker: Navigate root folder where docker-compose exist and run the following command: docker-compose up --build
 
-***swagger documentation***
+***swagger documentation:***
 Please run the application first. 
 Link: http://localhost:8000/docs
