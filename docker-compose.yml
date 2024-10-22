@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ./app  # The context for building the app is the /app folder
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app  # Mount the /app folder into the container
+    depends_on:
+      - redis  # Ensure Redis starts before the app
+      - mongodb  # Ensure MongoDB starts before the app
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - MONGO_URL=mongodb://mongodb:27017/vehicle-allocation
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    command: ["mongod", "--bind_ip_all", "--auth=false"] # Disable authentication
+
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"

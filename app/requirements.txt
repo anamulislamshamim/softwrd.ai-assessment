@@ -1,0 +1,10 @@
+fastapi
+pymongo
+uvicorn
+python-dotenv
+pytest
+motor == 2.4.0
+redis
+pytest 
+pytest-asyncio 
+httpx
