@@ -41,3 +41,8 @@ I tried to write unit test. You will find it inside /app/tests/test_main.py file
 ***swagger documentation:***
 Please run the application first. 
 Link: http://localhost:8000/docs
+
+
+<br>
+***Some of my words***
+Alghough I've good experience in Python. In my current company I worked with Django. I never worked with FastAPI before. Since I have full time job. So, I did not get enough time to learn FastAPI. But still I tried to fulfill your assessment requirements and tried to scall the solution for millions of users. I can assure you If I will get the opportunity I will be one of your best employee. My professional dream is to become a software engineer at Google. Thank you very much for considering my application. 
