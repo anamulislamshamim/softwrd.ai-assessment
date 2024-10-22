@@ -34,6 +34,7 @@ I tried to write unit test. You will find it inside /app/tests/test_main.py file
 1. In local machine: Navigate to /app and run the following command: <br>
  a. pip install -r requirements.txt</br>
  b. uvicorn main:app --reload </br>
+ c. Don't forget to run your Radis server
 2. Using Docker: Navigate root folder where docker-compose exist and run the following command: 
 <br>a. run your docker engine first
 <br>b. docker-compose up --build<br> 
