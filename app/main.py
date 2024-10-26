@@ -47,10 +47,10 @@ async def get_allocation_history(employee_id: str = None, vehicle_id: str = None
     cache_key = f"{employee_id}_{vehicle_id}_{date_str}"
     
     if cache.exists(cache_key):
+        print("Response from cache!")
         return [models.Allocation(**allocation) for allocation in json.loads(cache.get(cache_key))]
     
     results = await crud.get_allocation_history(employee_id, vehicle_id, date_range)
-    results = [models.Allocation(**allocation) for allocation in results if isinstance(allocation, dict)]
     # cache the new results
     if results:
         cache.set(cache_key, json.dumps([json.loads(allocation.json()) for allocation in results]))
